@@ -28,26 +28,26 @@ $(document).ready(() => {
         const weather = {
           icon: data.weather[0].icon,
           type: data.weather[0].main,
+          temp: Math.round(data.main.temp),
+          high: Math.round(data.main.temp_max),
+          low: Math.round(data.main.temp_min),
           description: data.weather[0].description,
-          windSpeed: data.wind.speed,
-          visibility: Math.round(data.visibility/5280)
+          windSpeed: Math.round(data.wind.speed),
+          visibility: Math.round(data.visibility / 5280)
         }
 
-        //Adds city and coordinates to city location section
+        //Adds data from API to weather and city-info sections
 
-        $('.city-info').append(`<p>
-                <span>${city.name}</span><br>
-                <span><img src=${weather.icon}/ alt="${weather.description}"></span><br>
-                  <span>${weather.type}</span><br>
-                    <span>${weather.windSpeed} mph</span><br>
-                    <span>${weather.visibility} mi</span><br>
+        $('.weather').append(`
+                <h1>${city.name}</h1>
+                <h2>${weather.temp}&deg;C<br><span><img src=${weather.icon} alt=${weather.description}/>${weather.type}</span><br>
+                <span>🔺 ${weather.high}&deg;C<br>🔻 ${weather.low}&deg;C</h2>
+             `)
 
-                <span>Sunrise - ${city.sunrise}</span><br>
-                <span>Sunset - ${city.sunset}</span>
-             </p>`)
-
-
-
+        $('.weather').append(`
+                <h2><span>🌄 ${city.sunrise}<br>🌇 ${city.sunset}</span><br>
+                <span>💨 ${weather.windSpeed} mph<br> 👀 ${weather.visibility} mi<h2>
+             `)
 
         //
 
