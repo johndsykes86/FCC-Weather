@@ -1,6 +1,11 @@
 $header-color: dodgerblue;
 
-h1 {
-font: 200% sans-serif;
-    color: $header-color;
+.container{
+  margin: 40px auto;
+}
+
+header h1 {
+  font: 300% sans-serif;
+  color: $header-color;
+  text-align: center;
 }
