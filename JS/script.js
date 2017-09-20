@@ -39,14 +39,23 @@ $(document).ready(() => {
         //Adds data from API to weather and city-info sections
 
         $('.weather').append(`
-                <h1>${city.name}</h1>
-                <h2>${weather.temp}&deg;C<br><span><img src=${weather.icon} alt=${weather.description}/>${weather.type}</span><br>
-                <span>🔺 ${weather.high}&deg;C<br>🔻 ${weather.low}&deg;C</h2>
+                <h1 class="city-name">${city.name}</h1>
+                <div class="info">
+                  <div class="info-item"><h3>${weather.temp}&deg;C</h3></div>
+                  <div class="info-item"><h3><img src=${weather.icon} alt=${weather.description}/>${weather.type}</h3></div>
+                  <div class="info-item"><h3>🔺 ${weather.high}&deg;C</h3></div>
+                  <div class="info-item"><h3>🔻 ${weather.low}&deg;C</h3></div>
+                </div>
              `)
 
-        $('.weather').append(`
-                <h2><span>🌄 ${city.sunrise}<br>🌇 ${city.sunset}</span><br>
-                <span>💨 ${weather.windSpeed} mph<br> 👀 ${weather.visibility} mi<h2>
+        $('.weather-info').append(`
+              <div class = "city-info">
+                <h2 class='city-info-item'>🌄 ${city.sunrise}</h2>
+                <h2 class='city-info-item'>🌇 ${city.sunset}</h2>
+              <hr/>
+                <h2 class='city-info-item'>💨 ${weather.windSpeed} mph</h2>
+                <h2 class='city-info-item'>👀 ${weather.visibility} mi</h2>
+              </div>
              `)
 
         //
