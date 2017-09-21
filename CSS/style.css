@@ -3,7 +3,7 @@
 }
 
 hr {
-  border-top: 1px solid #8c8b8b;
+  border-top: 1px solid rgba(219, 208, 207, 0.75);
   border-bottom: 1px solid #fff;
   clear: both;
   display: block;
@@ -28,7 +28,7 @@ body {
 
 header h1 {
   font: 400% sans-serif;
-  color: dodgerblue;
+  color: rgba(225, 225, 226, 0.75);
   text-align: center;
 }
 
@@ -47,46 +47,38 @@ header h1 {
   justify-content: space-around;
   align-items: center;
   align-content: space-around;
-  height: 400px;
-  width: 600px;
+  height: 500px;
+  width: 1000px;
 }
 
-.weather h1 {
+.city-header {
   text-align: center;
 }
 
 .weather-info {
-  flex-grow: 1;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: space-around;
-}
-
-.info {
-  width: 300px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: space-around;
-  align-content: space-around;
-}
-
-.info-item {
-  height: 130px;
-  width: 130px;
-  margin: 0 auto;
-  text-align: center;
-  vertical-align: middle;
-  border: 2px solid black;
-}
-
-.city-info {
-  width: 300px;
-  display: flex;
-  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+
+.info {
+  width: 800px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.info-item {
+  height: 180px;
+  width: 180px;
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgba(22, 31, 40, 0.75);
+  color: rgba(219, 208, 207, 0.75);
+  padding: 20px;
 }
